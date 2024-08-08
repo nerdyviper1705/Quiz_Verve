@@ -1,0 +1,343 @@
+/* Basic Reset */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif; /* Use Roboto as the default font */
+}
+
+/* Welcome Page */
+.welcome-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.animation-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.animation-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.text-overlay h1 {
+  font-size: 4em;
+  margin: 0;
+  font-weight: 700; /* Use bold font weight */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#enter-button {
+  background-color: orange;
+  color: black;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#enter-button:hover {
+  background-color: white;
+  color: black;
+}
+
+#enter-button:active {
+  background-color: black;
+  color: white;
+}
+
+/* Profile Information Page */
+.profile-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.form-section {
+  width: calc(50% - 10px); /* Adjust width for gap */
+  padding: 20px;
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.rules-section {
+  width: calc(50% - 10px); /* Adjust width for gap */
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  box-sizing: border-box;
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Add a gap between columns */
+.profile-container > div {
+  margin-right: 20px; /* Adjust the gap as needed */
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  color: #333; /* Darker color for better readability */
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 1.1em; /* Slightly smaller for a professional look */
+  color: #555; /* Slightly darker color for better readability */
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 15px; /* Increase padding for better visibility */
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em; /* Slightly smaller for a professional look */
+  box-sizing: border-box;
+}
+
+button {
+  background-color: orange;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1em; /* Slightly smaller for a professional look */
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+button:active {
+  background-color: black;
+  color: white;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Add styles for fields with errors */
+.error-border {
+  border: 2px solid red;
+}
+
+/* Rules Section */
+.rules-section ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 1em; /* Professional size */
+  line-height: 1.6; /* Improve readability with increased line height */
+}
+
+.rules-section li {
+  margin-bottom: 10px; /* Add margin for better separation */
+}
+
+/* Category Page */
+.category-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Space between category items */
+}
+
+.category-item {
+  width: 200px; /* Set a consistent width */
+  padding: 15px;
+  background-color: orange;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.category-item:hover {
+  background-color: white;
+  color: black;
+}
+
+.category-item:active {
+  background-color: black;
+  color: white;
+}
+
+/* Question Page */
+.question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#question-text {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#answers-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.option {
+  width: 80%;
+  max-width: 600px;
+  padding: 10px;
+  margin: 5px 0;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.option:hover {
+  background-color: #ddd;
+}
+
+.correct {
+  background-color: green;
+  color: white;
+}
+
+.wrong {
+  background-color: red;
+  color: white;
+}
+
+#timer {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Fade out effect */
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+#score-page {
+  background-color: black;
+  color: orange;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#score-display {
+  font-size: 2em;
+}
+
+#restart-button {
+  background-color: orange;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+#restart-button:hover {
+  background-color: darkorange;
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Style for the score page */
+#score-container {
+  background-color: black;
+  color: white; /* For text color */
+  font-size: 2em; /* Increase font size */
+  display: flex; /* Flexbox for centering */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  text-align: center;
+}
+
+#score-container > div {
+  display: flex;
+  flex-direction: column; /* Stack score and button vertically */
+  align-items: center;
+}
+
+#score {
+  color: orange; /* Set score text color */
+  margin: 0; /* Remove default margin */
+}
+
+.hidden {
+  display: none; /* Hide element */
+}
+#message {
+  display: block;
+  background-color: yellow; /* Temporary style for visibility */
+  border: 1px solid black; /* Temporary style for visibility */
+}

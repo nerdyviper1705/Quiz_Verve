@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to The Quiz Master</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <!-- Welcome Page -->
+    <div id="welcome-page" class="welcome-container">
+      <div class="animation-background">
+        <video autoplay loop muted>
+          <source src="./images/welcome-animation.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="text-overlay">
+        <h1>Welcome to The Quiz Master</h1>
+        <button id="enter-button">Enter</button>
+      </div>
+    </div>
+
+    <!-- Profile Information Page -->
+    <div id="profile-page" class="profile-container hidden">
+      <div class="form-section">
+        <h2>Please fill in your details</h2>
+        <form id="profile-form">
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" name="first-name" required />
+          <label for="last-name">Last Name:</label>
+          <input type="text" id="last-name" name="last-name" required />
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required />
+          <span id="error-message" class="error-message hidden"
+            >Please enter all required fields.</span
+          >
+          <span id="email-error" class="error-message hidden"
+            >Please enter a correct email address (e.g., abc@xyz.com).</span
+          >
+          <button type="button" id="ready-button">I am ready</button>
+        </form>
+      </div>
+      <div class="rules-section">
+        <h2>Rules of the Game</h2>
+        <ul>
+          <li>Each question you get 10 seconds.</li>
+          <li>Each correct answer you get 10 points.</li>
+          <li>Wrong answer gives you -5 points.</li>
+          <li>Remember NO CHEATING!</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Category Page -->
+    <div id="category-page" class="category-container hidden">
+      <h2>Select Your Category</h2>
+      <div class="categories">
+        <div class="category-item" data-category="General Knowledge">
+          General Knowledge
+        </div>
+        <div class="category-item" data-category="Entertainment">
+          Entertainment
+        </div>
+        <div class="category-item" data-category="Science & Technology">
+          Science & Technology
+        </div>
+        <div class="category-item" data-category="Sports">Sports</div>
+        <div class="category-item" data-category="Indian History & Culture">
+          Indian History & Culture
+        </div>
+      </div>
+    </div>
+
+    <!-- Question Page -->
+    <div id="question-page" class="question-container hidden">
+      <div id="question-section">
+        <h2 id="question-text">Question will appear here</h2>
+        <div id="answers-container">
+          <!-- Answers will be dynamically inserted here -->
+        </div>
+      </div>
+      <div id="timer">Time left: <span id="timer-count">10</span> seconds</div>
+      <div id="score-container" class="hidden">
+        <h2>Your Total Score: <span id="total-score">0</span></h2>
+        <button id="restart-button">Restart</button>
+      </div>
+    </div>
+
+    <!-- <div id="timer-count">10</div> -->
+
+    <!-- Add this to your HTML file -->
+    <div id="score-page" class="score-page">
+      <div id="score-display"></div>
+    </div>
+
+    <!-- Score Page HTML -->
+    <div id="score-page" class="hidden">
+      <div id="score-display"></div>
+      <button id="restart-button">Restart</button>
+    </div>
+
+    <div id="score-page" style="display: none">
+      <p id="score-display" style="font-size: large"></p>
+      <p id="message" style="font-size: large"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
